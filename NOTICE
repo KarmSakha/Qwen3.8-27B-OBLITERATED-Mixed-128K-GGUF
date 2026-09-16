@@ -1,0 +1,10 @@
+Qwen3.8-27B-OBLITERATED — karmx mixed quant
+==========================================
+
+Base model:  OBLITERATUS/Qwen3.8-27B-OBLITERATED (Apache-2.0)
+Original:    Qwen3.8-27B by Qwen / Alibaba (Apache-2.0)
+Quant pack:  karmx (KarmSakha) — calibrated imatrix, mixed quantization recipe,
+             benchmark and validation evidence.
+
+This distribution contains quantized model weights derived from the base model.
+Use subject to the Apache-2.0 license terms of the base model.

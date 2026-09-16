@@ -1,0 +1,8 @@
+Modifications vs OBLITERATUS/Qwen3.8-27B-OBLITERATED upstream:
+
+- Weights requantized from the upstream Q8_0 GGUF with a per-tensor mixed recipe
+  (see CALIBRATION-AND-QUANTIZATION.md) using a karmx-generated importance matrix.
+- MTP/nextn draft block (blk.64.*) pinned to Q6_K to preserve speculative decoding.
+- No architecture changes, no retraining, no tokenizer changes, no censorship changes.
+- mmproj (vision projector) distributed unchanged from upstream bf16.
+- Not affiliated with OBLITERATUS or Qwen; community quant for llama.cpp.
