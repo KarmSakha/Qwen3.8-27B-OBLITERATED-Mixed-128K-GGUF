@@ -14,7 +14,11 @@
     "decode_tps_with_draft_mtp": 65.29,
     "mtp_draft_acceptance": 0.87805,
     "mtp_mean_accepted_len": 3.62,
-    "mtp_acc_per_position": [0.927, 0.873, 0.818],
+    "mtp_acc_per_position": [
+      0.927,
+      0.873,
+      0.818
+    ],
     "mtp_tokens": "144 accepted / 164 generated"
   },
   "imatrix": {
@@ -27,14 +31,26 @@
   "recipe": {
     "default": "IQ2_XXS",
     "overrides": {
-      "blk\\.64\\.": "Q6_K", "ffn_down": "IQ3_XXS", "attn_qkv": "Q4_K", "attn_gate": "Q4_K",
-      "ssm_out": "Q4_K", "attn_q|attn_k|attn_v|attn_output": "Q4_K",
-      "token_embd": "Q5_K", "output": "Q5_K"
+      "blk\\.64\\.": "Q6_K",
+      "ffn_down": "IQ3_XXS",
+      "attn_qkv": "Q4_K",
+      "attn_gate": "Q4_K",
+      "ssm_out": "Q4_K",
+      "attn_q|attn_k|attn_v|attn_output": "Q4_K",
+      "token_embd": "Q5_K",
+      "output": "Q5_K"
     }
   },
   "limits": [
     "128K ctx validated on 16GB; 262144 would exceed VRAM",
     "dense model: prefill slower than MoE siblings",
     "spec-decode requires --spec-type draft-mtp flag"
-  ]
+  ],
+  "heldout_ppl": {
+    "note": "same eval text both models (calibration corpus \u2014 relative comparison)",
+    "karmx_mixed": 3.1674,
+    "upstream_Q2_K": 3.1809,
+    "chunks": 12,
+    "ctx": 512
+  }
 }
